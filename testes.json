@@ -1,0 +1,77 @@
+{
+    "exportador": {
+        "cnpjcpf": "48295562001965",
+        "nome": "USINA ALTO ALEGRE S AACUCAR E AL",
+        "cidadeId": 6085,
+        "ierg": "90527221-76",
+        "telefone": "4336621311",
+        "email": "logistica@altoalegre.com.br;evandro.domingos@altoa"
+    },
+    "cliente": {
+        "cnpjcpf": "48295562001965",
+        "nome": "USINA ALTO ALEGRE S AACUCAR E AL",
+        "cidadeId": 6085,
+        "ierg": "90527221-76",
+        "telefone": "4336621311",
+        "email": "logistica@altoalegre.com.br;evandro.domingos@altoa"
+    },
+    "transportador": null,
+    "codTerminal": 27,
+    "codProduto": 17011100,
+    "dataChegada": "28/08/2024",
+    "placaVagao": "HPE7171561",
+    "pesoBruto": "100180",
+    "tara": "22000",
+    "codigoComboio": 1974650,
+    "notaFiscalPrincipal": [
+        {
+            "serie": "005",
+            "numero": "254700",
+            "conhecimentoEletronico": "004611579",
+            "origem": {
+                "cnpjcpf": "48295562001965",
+                "nome": "USINA ALTO ALEGRE S A  ACUCAR E AL",
+                "cidadeId": 155,
+                "ierg": "90527221-76",
+                "telefone": null,
+                "email": null
+            },
+            "destinatario": {
+                "cnpjcpf": "48295562001965",
+                "nome": "USINA ALTO ALEGRE S A  ACUCAR E AL",
+                "cidadeId": 155,
+                "ierg": "90527221-76",
+                "telefone": null,
+                "email": null
+            },
+            "emissao": "26/08/2024",
+            "saida": "26/08/2024",
+            "valorICMS": "0",
+            "valorIPI": "0",
+            "quantidade": "78180",
+            "valorTotal": "226722",
+            "chaveAcesso": "41240848295562001965550050002547001871591716",
+            "cfop": null
+        }
+    ],
+    "notasFiscais": [
+        {
+            "serie": "005",
+            "numero": "254700",
+            "origem": {
+                "cnpjcpf": "48295562001965",
+                "nome": "USINA ALTO ALEGRE S A  ACUCAR E AL",
+                "cidadeId": 155,
+                "ierg": "90527221-76",
+                "telefone": null,
+                "email": null
+            },
+            "quantidade": 78180,
+            "valorTotal": "226722",
+            "indParcial": "P",
+            "indQuebra": null,
+            "chaveAcesso": "41240848295562001965550050002547001871591716"
+        }
+    ],
+    "laudo": []
+}

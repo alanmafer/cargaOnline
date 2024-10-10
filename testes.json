@@ -1,77 +1,136 @@
 {
     "exportador": {
-        "cnpjcpf": "48295562001965",
-        "nome": "USINA ALTO ALEGRE S AACUCAR E AL",
-        "cidadeId": 6085,
-        "ierg": "90527221-76",
-        "telefone": "4336621311",
-        "email": "logistica@altoalegre.com.br;evandro.domingos@altoa"
+        "cnpjcpf": "03902252001680",
+        "nome": "OLAM BRASIL LTDA",
+        "cidadeId": 205,
+        "ierg": "9090038068",
+        "telefone": "3532992550",
+        "email": "tax.br@olamnet.com;log.br@olamnet.com;fiscalcoe.br"
     },
     "cliente": {
-        "cnpjcpf": "48295562001965",
-        "nome": "USINA ALTO ALEGRE S AACUCAR E AL",
-        "cidadeId": 6085,
-        "ierg": "90527221-76",
-        "telefone": "4336621311",
-        "email": "logistica@altoalegre.com.br;evandro.domingos@altoa"
+        "cnpjcpf": "79621439000191",
+        "nome": "ADMINISTRACAO DOS PORTOS DE PARANAG",
+        "cidadeId": 233,
+        "ierg": " ",
+        "telefone": "4134201101",
+        "email": "X"
     },
     "transportador": null,
-    "codTerminal": 27,
-    "codProduto": 17011100,
-    "dataChegada": "28/08/2024",
-    "placaVagao": "HPE7171561",
-    "pesoBruto": "100180",
-    "tara": "22000",
-    "codigoComboio": 1974650,
+    "codTerminal": 10,
+    "codProduto": 12011203,
+    "dataChegada": "23/09/2024",
+    "placaVagao": "HFD6324827",
+    "pesoBruto": "69640",
+    "tara": "18740",
+    "codigoComboio": 1978612,
     "notaFiscalPrincipal": [
         {
-            "serie": "005",
-            "numero": "254700",
-            "conhecimentoEletronico": "004611579",
+            "serie": "120",
+            "numero": "68902",
+            "conhecimentoEletronico": "004637685",
             "origem": {
-                "cnpjcpf": "48295562001965",
-                "nome": "USINA ALTO ALEGRE S A  ACUCAR E AL",
-                "cidadeId": 155,
-                "ierg": "90527221-76",
+                "cnpjcpf": "77863223007209",
+                "nome": "CVALE  COOPERATIVA AGROINDUSTRIAL",
+                "cidadeId": 50,
+                "ierg": "283231033",
                 "telefone": null,
                 "email": null
             },
             "destinatario": {
-                "cnpjcpf": "48295562001965",
-                "nome": "USINA ALTO ALEGRE S A  ACUCAR E AL",
-                "cidadeId": 155,
-                "ierg": "90527221-76",
+                "cnpjcpf": "03902252001680",
+                "nome": "OLAM BRASIL LTDA",
+                "cidadeId": 50,
+                "ierg": "9090038068",
                 "telefone": null,
                 "email": null
             },
-            "emissao": "26/08/2024",
-            "saida": "26/08/2024",
+            "emissao": "14/08/2024",
+            "saida": "14/08/2024",
             "valorICMS": "0",
             "valorIPI": "0",
-            "quantidade": "78180",
-            "valorTotal": "226722",
-            "chaveAcesso": "41240848295562001965550050002547001871591716",
+            "quantidade": "47880",
+            "valorTotal": "113715",
+            "chaveAcesso": "50240877863223007209551200000689021100123674",
+            "cfop": null
+        },
+        {
+            "serie": "120",
+            "numero": "68936",
+            "conhecimentoEletronico": "004637685",
+            "origem": {
+                "cnpjcpf": "77863223007209",
+                "nome": "CVALE  COOPERATIVA AGROINDUSTRIAL",
+                "cidadeId": 50,
+                "ierg": "283231033",
+                "telefone": null,
+                "email": null
+            },
+            "destinatario": {
+                "cnpjcpf": "03902252001680",
+                "nome": "OLAM BRASIL LTDA",
+                "cidadeId": 50,
+                "ierg": "9090038068",
+                "telefone": null,
+                "email": null
+            },
+            "emissao": "14/08/2024",
+            "saida": "14/08/2024",
+            "valorICMS": "0",
+            "valorIPI": "0",
+            "quantidade": "40090",
+            "valorTotal": "95213.75",
+            "chaveAcesso": "50240877863223007209551200000689361418966049",
             "cfop": null
         }
     ],
     "notasFiscais": [
         {
-            "serie": "005",
-            "numero": "254700",
+            "serie": "120",
+            "numero": "68936",
             "origem": {
-                "cnpjcpf": "48295562001965",
-                "nome": "USINA ALTO ALEGRE S A  ACUCAR E AL",
-                "cidadeId": 155,
-                "ierg": "90527221-76",
+                "cnpjcpf": "77863223007209",
+                "nome": "CVALE  COOPERATIVA AGROINDUSTRIAL",
+                "cidadeId": 50,
+                "ierg": "283231033",
                 "telefone": null,
                 "email": null
             },
-            "quantidade": 78180,
-            "valorTotal": "226722",
+            "quantidade": 5540,
+            "valorTotal": "95213.75",
             "indParcial": "P",
             "indQuebra": null,
-            "chaveAcesso": "41240848295562001965550050002547001871591716"
+            "chaveAcesso": "50240877863223007209551200000689361418966049"
+        },
+        {
+            "serie": "120",
+            "numero": "68902",
+            "origem": {
+                "cnpjcpf": "77863223007209",
+                "nome": "CVALE  COOPERATIVA AGROINDUSTRIAL",
+                "cidadeId": 50,
+                "ierg": "283231033",
+                "telefone": null,
+                "email": null
+            },
+            "quantidade": 45360,
+            "valorTotal": "113715",
+            "indParcial": "P",
+            "indQuebra": null,
+            "chaveAcesso": "50240877863223007209551200000689021100123674"
         }
     ],
-    "laudo": []
+    "laudo": [
+        {
+            "codigo": 10,
+            "valor": "6.5"
+        },
+        {
+            "codigo": 1,
+            "valor": "10.8"
+        },
+        {
+            "codigo": 8,
+            "valor": "0.87"
+        }
+    ]
 }

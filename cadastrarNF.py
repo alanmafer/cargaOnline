@@ -2,7 +2,9 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+
 import json
+import time
 
 with open('testes.json') as arquivo:
     r = json.load(arquivo)
@@ -25,9 +27,22 @@ nav.find_element(By.XPATH,'/html/body/form/div/center/table/tbody/tr[1]/td/a[1]/
 # Preencher Dados da NF
 if 'notaFiscalPrincipal' in r:
     for idx, r in enumerate(r['notaFiscalPrincipal'], 1):
-        if 'chaveAcesso' in r:         
-            nav.find_element(By.XPATH, '/html/body/form/div/center/table/tbody/tr[2]/td[2]/input').send_keys({r['chaveAcesso']});
+        if 'chaveAcesso' in r:   
+            principal = nav.current_window_handle      
+            nav.find_element(By.XPATH, '/html/body/form/div/center/table/tbody/tr[2]/td[2]/input').send_keys({r['chaveAcesso']});            
             nav.find_element(By.XPATH, '/html/body/form/div/center/table/tbody/tr[2]/td[2]/input').send_keys('\ue004');
+            time.sleep(1);
+            janelas = nav.window_handles;
+            # fechar janela
+            for janela in janelas:
+                if janela != principal:
+                    nav.switch_to.window(janela);
+                    nav.close();
+                    nav.switch_to.window(principal);
+                    break;  
+                        
+            iframe = nav.find_element(By.NAME, 'principal');
+            nav.switch_to.frame(iframe);             
             nav.find_element(By.XPATH, '/html/body/form/div/center/table/tbody/tr[8]/td[2]/input').send_keys({r['destinatario']['cnpjcpf']});
             nav.find_element(By.XPATH, '/html/body/form/div/center/table/tbody/tr[9]/td[2]/input').send_keys({r['emissao']});
             nav.find_element(By.XPATH, '/html/body/form/div/center/table/tbody/tr[10]/td[2]/input').send_keys({r['saida']});
@@ -41,4 +56,14 @@ if 'notaFiscalPrincipal' in r:
 
             # Gravar
             nav.find_element(By.XPATH, '/html/body/form/p/input[1]').click();
-            nav.find_element(By.XPATH, '/html/body/center/div/table/tbody/tr[3]/td/p/a').click();
+
+            elemento = nav.find_element(By.XPATH, '/html/body/center/div/table/tbody/tr[2]/td/font/b');
+            texto = elemento.text
+            if "ERRO. Chave de Acesso da NF já foi cadastrada." in texto:
+                nav.find_element(By.XPATH, '/html/body/center/div/table/tbody/tr[3]/td/p/a').click();
+                nav.find_element(By.XPATH, '/html/body/form/p/input[2]').click();
+                time.sleep(2);
+                alerta = nav.switch_to.alert;
+                alerta.dismiss();
+            else: 
+                 nav.find_element(By.XPATH, '/html/body/center/div/table/tbody/tr[3]/td/p/a').click();

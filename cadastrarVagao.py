@@ -35,13 +35,20 @@ codTerminal = str(codTerminal) + ',21';
 dropdown_element = nav.find_element(By.XPATH,'/html/body/form/div/center/table[1]/tbody/tr[2]/td[2]/select');
 select =  Select(dropdown_element);
 select.select_by_value(codTerminal);
-for i in range (18):
-    nav.find_element(By.XPATH, '/html/body/form/div/center/table[1]/tbody/tr[3]/td[2]/input').send_keys('\ue003');
-# nav.find_element(By.XPATH, '/html/body/form/div/center/table[1]/tbody/tr[3]/td[2]/input').send_keys(r['cliente']['cnpjcpf']);
-# nav.find_element(By.XPATH, '/html/body/form/div/center/table[1]/tbody/tr[3]/td[2]/input').send_keys('\ue004');
-# nav.find_element(By.XPATH, '/html/body/formcls/div/center/table[1]/tbody/tr[4]/td[2]/input[3]').send_keys(r['exportador']['cnpjcpf']);
-# nav.find_element(By.XPATH, '/html/body/form/div/center/table[1]/tbody/tr[4]/td[2]/input[3]').send_keys('\ue004');
 
+if codTerminal != '10,21': # POOL Corredor
+    for i in range (18): 
+        nav.find_element(By.XPATH, '/html/body/form/div/center/table[1]/tbody/tr[3]/td[2]/input').send_keys('\ue003');
+    nav.find_element(By.XPATH, '/html/body/form/div/center/table[1]/tbody/tr[3]/td[2]/input').send_keys(r['cliente']['cnpjcpf']);
+    nav.find_element(By.XPATH, '/html/body/form/div/center/table[1]/tbody/tr[3]/td[2]/input').send_keys('\ue004');
+else:
+    print('é diferente');
+
+nav.find_element(By.XPATH, '/html/body/form/div/center/table[1]/tbody/tr[4]/td[2]/input[3]').send_keys(r['exportador']['cnpjcpf']);
+nav.find_element(By.XPATH, '/html/body/form/div/center/table[1]/tbody/tr[4]/td[2]/input[3]').send_keys('\ue004');
+
+
+time.sleep(10);
 dropdown_element = nav.find_element(By.XPATH,'/html/body/form/div/center/table[1]/tbody/tr[6]/td[2]/select');
 select =  Select(dropdown_element);
 select.select_by_value(r['codProduto']);
@@ -50,7 +57,6 @@ select.select_by_value(r['codProduto']);
 nav.find_element(By.XPATH, '//*[@id="CARGA_VAGAOcad"]/div/center/table[1]/tbody/tr[10]/td[2]/input').send_keys(r['pesoBruto']);
 nav.find_element(By.XPATH, '//*[@id="CARGA_VAGAOcad"]/div/center/table[1]/tbody/tr[11]/td[2]/input').send_keys(r['tara']);
 
-time.sleep(30);
 # # Informações da(s) Nota(s) Fiscal(is)
 nav.find_element(By.XPATH, '//*[@id="txtNfSerie"]').send_keys('50');
 # nav.find_element(By.XPATH, '//*[@id="txtNfNumero"]').send_keys('5088');
@@ -60,4 +66,3 @@ nav.find_element(By.XPATH, '//*[@id="txtNfSerie"]').send_keys('50');
 # Gravar Vagão
 #nav.find_element(By.XPATH, '//*[@id="CARGA_VAGAOcad"]/p/input[1]').click()
 # time.sleep(20)
-
